@@ -1,0 +1,447 @@
+<!-- Front-end examen Nigel Fijnheer MD2A -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Visbox Front-end examen Nigel Fijnheer MD2A">
+    <meta name="keywords" content="Front-end examen Nigel Fijnheer">
+    <meta name="author" content="Nigel Fijnheer">
+
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Visbox</title>
+
+</head>
+<body>
+
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><img class="logoimg" src="images/boxvislogo.png" alt="Boxvis logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#inlogmodal"><i class="fa fa-user" style="font-size:25px;"></i> Log-in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#cartModal"><i class="fa fa-shopping-cart" style="font-size:25px;"></i> Winkelwagen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Inlog Modal -->
+    <div class="modal fade" id="inlogmodal" tabindex="-1" role="dialog" aria-labelledby="inlogmodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inlogmodal">Inloggen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-label-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    </div>
+                        <br>
+                    <div class="form-label-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal" data-toggle="modal" data-target="#registermodal">Registreren</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Log-in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Winkelwagen Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModal">Winkelwagen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Verder winkelen</button>
+                    <button type="button" class="btn btn-primary">Betalen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registreren Modal -->
+    <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registermodal">Registreren</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Adres</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Straat">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Adres 2</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Straat">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Woonplaats</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Provincie</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Kies...</option>
+                                    <option>Noord-Holland</option>
+                                    <option>Zuid-Holland</option>
+                                    <option>Utrecht</option>
+                                    <option>Gelderland</option>
+                                    <option>Noord-Brabant</option>
+                                    <option>Overijssel</option>
+                                    <option>Flevoland</option>
+                                    <option>Drenthe</option>
+                                    <option>Friesland</option>
+                                    <option>Groningen</option>
+                                    <option>Limburg</option>
+                                    <option>Zeeland</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Postcode</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Registreer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header foto -->
+    <div class="header_pic">
+    </div>
+
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!---------------------------------------------- Haring ------------------------------------------------------->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productharing.jpg" class="card-img-top" alt="Haring">
+                    <div class="card-body">
+                        <h5 class="card-title">Haring</h5>
+                        <p class="card-text">Haring is een echte Hollandse lekkernij met een sterke uitgesproken smaak.</p>
+                        <a href="#" data-toggle="modal" data-target="#haringModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;2,40
+                    </div>
+                </div>
+            </div>
+
+        <!-- Haring Modal -->
+        <div class="modal fade" id="haringModal" tabindex="-1" role="dialog" aria-labelledby="haringModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Haring</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Zalm --------------------------------------------------------->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productzalm.jpg" class="card-img-top" alt="Zalm">
+                    <div class="card-body">
+                        <h5 class="card-title">Zalm</h5>
+                        <p class="card-text">Zalm is een heerlijke zachte vis die je op allerlei manieren kunt eten.</p>
+                        <a href="#" data-toggle="modal" data-target="#zalmModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;4,-
+                    </div>
+                </div>
+            </div>
+
+        <!-- Haring Modal -->
+        <div class="modal fade" id="zalmModal" tabindex="-1" role="dialog" aria-labelledby="zalmModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Zalm</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Garnaal ------------------------------------------------------>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productgarnaal.jpg" class="card-img-top" alt="Garnaal">
+                    <div class="card-body">
+                        <h5 class="card-title">Garnaal</h5>
+                        <p class="card-text">De Hollandse garnaal is klein en daarom machinaal moeilijk te pellen.</p>
+                        <a href="#"  data-toggle="modal" data-target="#garnaalModal"class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;3,-
+                    </div>
+                </div>
+            </div>
+
+        <!-- Garnaal Modal -->
+        <div class="modal fade" id="garnaalModal" tabindex="-1" role="dialog" aria-labelledby="garnaalModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Garnaal</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Kibbeling ---------------------------------------------------->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productkibbeling.jpg" class="card-img-top" alt="Kibbeling">
+                    <div class="card-body">
+                        <h5 class="card-title">Kibbeling</h5>
+                        <p class="card-text">Een oer-Hollandse snack, waarbij stukken vis door een beslag worden gehaald.</p>
+                        <a href="#" data-toggle="modal" data-target="#kibbelingModal"  class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;2,-
+                    </div>
+                </div>
+            </div>
+
+        <!-- Kibbeling Modal -->
+        <div class="modal fade" id="kibbelingModal" tabindex="-1" role="dialog" aria-labelledby="kibbelingModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Kibbeling</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Lekkerbek ---------------------------------------------------->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productlekkerbek.jpg" class="card-img-top" alt="Lekkerbek">
+                    <div class="card-body">
+                        <h5 class="card-title">Lekkerbek</h5>
+                        <p class="card-text">Het lekkerbekje is een filet wat door een beslag wordt gehaalden daarna worden ze gebakken.</p>
+                        <a href="#" data-toggle="modal" data-target="#lekkerbekModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;3,-
+                    </div>
+                </div>
+            </div>
+
+        <!-- Lekkerbek Modal -->
+        <div class="modal fade" id="lekkerbekModal" tabindex="-1" role="dialog" aria-labelledby="lekkerbekModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Lekkerbek</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Makreel ------------------------------------------------------>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productmakreel.jpg" class="card-img-top" alt="Makreel">
+                    <div class="card-body">
+                        <h5 class="card-title">Makreel</h5>
+                        <p class="card-text">Makreel staat bekend om haar gezonde vetten. Er zit dan ook 10 tot 15 % vet in.</p>
+                        <a href="#" data-toggle="modal" data-target="#makreelModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;2,50
+                    </div>
+                </div>
+            </div>
+
+        <!-- Makreel Modal -->
+        <div class="modal fade" id="makreelModal" tabindex="-1" role="dialog" aria-labelledby="makreelModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Makreel</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Paling ------------------------------------------------------->
+             <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productpaling.jpg" class="card-img-top" alt="Paling">
+                    <div class="card-body">
+                        <h5 class="card-title">Paling</h5>
+                        <p class="card-text">Vers gerookte gefileerde paling zonder huid en graat. Ook lekker voor op brood.</p>
+                        <a href="#" data-toggle="modal" data-target="#palingModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;6,40
+                    </div>
+                </div>
+            </div>
+
+        <!-- Paling Modal -->
+        <div class="modal fade" id="palingModal" tabindex="-1" role="dialog" aria-labelledby="palingModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Paling</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------- Schol -------------------------------------------------------->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/productschol.jpg" class="card-img-top" alt="Schol">
+                    <div class="card-body">
+                        <h5 class="card-title">Schol</h5>
+                        <p class="card-text">Schol is een van de meest gevangen vissoorten van Nederland.</p>
+                        <a href="#" data-toggle="modal" data-target="#scholModal" class="btn btn-primary">Lees meer</a>&nbsp;&nbsp;&nbsp;&nbsp;&euro;4,40
+                    </div>
+                </div>
+            </div>
+
+        <!-- Schol Modal -->
+        <div class="modal fade" id="scholModal" tabindex="-1" role="dialog" aria-labelledby="scholModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haringModal">Schol</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+<footer>
+
+</footer>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

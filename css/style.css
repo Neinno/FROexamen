@@ -1,0 +1,19 @@
+.header_pic {
+    background-image:url("../images/headerimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+}
+
+.logoimg {
+    width: 150px;
+    height: 50px;
+}
+
+footer {
+    bottom: 0;
+    background-color: #007bff;
+    height: 50px;
+}
