@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+Sitemap: http://23698.hosts1.ma-cloud.nl/visbox/sitemap.xml
